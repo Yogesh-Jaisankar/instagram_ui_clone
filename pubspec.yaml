@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   antdesign_icons: ^0.0.3
   font_awesome_flutter: ^10.5.0
+  ionicons: ^0.2.2
 
 dev_dependencies:
   flutter_test:

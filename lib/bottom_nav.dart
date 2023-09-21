@@ -15,28 +15,21 @@ class BottomNav extends StatefulWidget {
 
 class _BottomNavState extends State<BottomNav> {
   int current_index = 0;
-  final PageController _pageController = PageController();
+  final List<Widget> _pages = [
+    Home(),
+    Search(),
+    Post(),
+    Reels(),
+    Profile(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: PageView(
-        controller: _pageController,
-        physics: NeverScrollableScrollPhysics(),
-        onPageChanged: (int newIndex) {
-          setState(() {
-            current_index = newIndex;
-          });
-        },
-        children: [
-          // Replace these with your different pages/widgets
-          Home(),
-          Search(),
-          Post(),
-          Reels(),
-          Profile(),
-        ],
+      body: IndexedStack(
+        index: current_index,
+        children: _pages,
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.black,
@@ -44,7 +37,7 @@ class _BottomNavState extends State<BottomNav> {
         enableFeedback: true,
         iconSize: 25,
         unselectedItemColor: Colors.white,
-        selectedItemColor: Colors.white60,
+        selectedItemColor: Colors.pinkAccent,
         selectedLabelStyle: TextStyle(fontSize: 12, color: Colors.black54),
         unselectedLabelStyle: TextStyle(fontSize: 12, color: Colors.black54),
         currentIndex: current_index,
@@ -52,11 +45,6 @@ class _BottomNavState extends State<BottomNav> {
           setState(() {
             current_index = newIndex;
           });
-          _pageController.animateToPage(
-            newIndex,
-            duration: Duration(milliseconds: 300),
-            curve: Curves.ease,
-          );
         },
         items: [
           BottomNavigationBarItem(
