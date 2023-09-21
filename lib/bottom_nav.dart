@@ -66,7 +66,7 @@ class _BottomNavState extends State<BottomNav> {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(100),
                   child: Image.asset(
-                    'assets/images/dp.png',
+                    'assets/images/dp.jpg',
                     fit: BoxFit.cover,
                   ),
                 ),

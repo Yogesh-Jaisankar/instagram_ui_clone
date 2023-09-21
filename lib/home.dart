@@ -114,7 +114,7 @@ class _HomeState extends State<Home> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(50),
                               child: Image.asset(
-                                "assets/images/dp.png",
+                                "assets/images/dp.jpg",
                                 fit: BoxFit.cover,
                               ),
                             ),
