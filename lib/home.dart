@@ -1,8 +1,7 @@
 import 'package:antdesign_icons/antdesign_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'dart:math' as math;
-
+import 'package:instagram_ui/inbox.dart';
 import 'package:ionicons/ionicons.dart';
 
 class Home extends StatefulWidget {
@@ -68,7 +67,11 @@ class _HomeState extends State<Home> {
                               size: 25,
                             ),
                             onPressed: () {
-                              print("Messages");
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Inbox()),
+                              );
                             },
                           ),
                           Container(

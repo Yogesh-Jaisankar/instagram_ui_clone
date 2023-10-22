@@ -1,9 +1,7 @@
 import 'package:antdesign_icons/antdesign_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ionicons/ionicons.dart';
-import 'package:shimmer/shimmer.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -125,57 +123,55 @@ class _PostState extends State<Profile> {
                     showModalBottomSheet(
                         isScrollControlled: true,
                         context: context,
-                        builder: (context)
-                          => Container(
-                            height: MediaQuery.of(context).size.height*0.65,
-                            width: double.infinity,
-                            color: Colors.black87,
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.only(left: 10, right: 10),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Center(
-                                    child: FaIcon(
-                                      (FontAwesomeIcons.windowMinimize),
-                                      size: 40,
-                                      color: Colors.grey,
+                        builder: (context) => Container(
+                              height: MediaQuery.of(context).size.height * 0.65,
+                              width: double.infinity,
+                              color: Colors.black87,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.only(left: 10, right: 10),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Center(
+                                      child: FaIcon(
+                                        (FontAwesomeIcons.windowMinimize),
+                                        size: 40,
+                                        color: Colors.grey,
+                                      ),
                                     ),
-                                  ),
-                                  buildMenuItem(
-                                    Ionicons.cog_outline,
-                                    "Settings and privacy",
-                                  ),
-                                  buildMenuItem(
-                                      Ionicons.chatbubbles_outline, "Threads"),
-                                  buildMenuItem(
-                                      Ionicons.stats_chart_outline, "Insights"),
-                                  buildMenuItem(
-                                      Ionicons.timer_outline, "Your activity"),
-                                  buildMenuItem(
-                                      Ionicons.archive_outline, "Archive"),
-                                  buildMenuItem(
-                                      Ionicons.qr_code_outline, "Qr code"),
-                                  buildMenuItem(
-                                      Ionicons.bookmark_outline, "Saved"),
-                                  buildMenuItem(
-                                      Ionicons.people_outline, "Supervision"),
-                                  buildMenuItem(
-                                      Ionicons.checkmark_circle_outline,
-                                      "Meta Verified"),
-                                  buildMenuItem(
-                                      Ionicons.ribbon_outline, "Close Friends"),
-                                  buildMenuItem(
-                                      Ionicons.star_outline, "Favourites"),
-                                  buildMenuItem(Ionicons.person_add_outline,
-                                      "Discover people"),
-                                ],
+                                    buildMenuItem(
+                                      Ionicons.cog_outline,
+                                      "Settings and privacy",
+                                    ),
+                                    buildMenuItem(Ionicons.chatbubbles_outline,
+                                        "Threads"),
+                                    buildMenuItem(Ionicons.stats_chart_outline,
+                                        "Insights"),
+                                    buildMenuItem(Ionicons.timer_outline,
+                                        "Your activity"),
+                                    buildMenuItem(
+                                        Ionicons.archive_outline, "Archive"),
+                                    buildMenuItem(
+                                        Ionicons.qr_code_outline, "Qr code"),
+                                    buildMenuItem(
+                                        Ionicons.bookmark_outline, "Saved"),
+                                    buildMenuItem(
+                                        Ionicons.people_outline, "Supervision"),
+                                    buildMenuItem(
+                                        Ionicons.checkmark_circle_outline,
+                                        "Meta Verified"),
+                                    buildMenuItem(Ionicons.ribbon_outline,
+                                        "Close Friends"),
+                                    buildMenuItem(
+                                        Ionicons.star_outline, "Favourites"),
+                                    buildMenuItem(Ionicons.person_add_outline,
+                                        "Discover people"),
+                                  ],
+                                ),
                               ),
-                            ),
-                          )
-                        );
+                            ));
                   },
                 )),
           ],
